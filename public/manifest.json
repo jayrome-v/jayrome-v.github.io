@@ -1,6 +1,6 @@
 {
-  "name": "LiveTerm",
-  "short_name": "LiveTerm",
+  "name": "JayCommandCenter",
+  "short_name": "JayCommandCenter",
   "theme_color": "#2E3440",
   "background_color": "#2E3440",
   "display": "fullscreen",
@@ -9,31 +9,26 @@
   "start_url": "/",
   "icons": [
     {
-      "src": "/android-icon-36x36.png",
+      "src": "/favicon-36x36.png",
       "sizes": "36x36",
       "type": "image/png",
       "density": "0.75"
     },
     {
-      "src": "/android-icon-48x48.png",
-      "sizes": "48x48",
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
       "type": "image/png",
       "density": "1.0"
     },
+    
     {
-      "src": "/android-icon-72x72.png",
-      "sizes": "72x72",
-      "type": "image/png",
-      "density": "1.5"
-    },
-    {
-      "src": "/android-icon-96x96.png",
+      "src": "/favicon-96x96.png",
       "sizes": "96x96",
       "type": "image/png",
       "density": "2.0"
     },
     {
-      "src": "/android-icon-144x144.png",
+      "src": "/favicon.png",
       "sizes": "144x144",
       "type": "image/png",
       "density": "3.0"
