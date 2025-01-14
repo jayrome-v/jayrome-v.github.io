@@ -42,12 +42,12 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
       </Head>
       <div className="h-screen flex flex-col overflow-hidden">
         {/* Header */}
-        <div className="text-center mt-8 text-2xl font-bold text-light-yellow dark:text-dark-yellow">
+        <div className="text-center text-2xl font-bold text-light-yellow dark:text-dark-yellow mt-8">
           {config.title}
         </div>
 
         {/* Terminal Box */}
-        <div className="p-4 mt-8 flex-1 border rounded-md border-light-yellow dark:border-dark-yellow">
+        <div className="flex-1 w-full p-4 mt-4 border rounded-md border-light-yellow dark:border-dark-yellow overflow-hidden">
           <div ref={containerRef} className="overflow-y-auto h-full">
             <History history={history} />
 
