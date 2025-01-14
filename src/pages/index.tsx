@@ -4,7 +4,9 @@ import config from '../../config.json';
 import { Input } from '../components/input';
 import { useHistory } from '../components/history/hook';
 import { History } from '../components/history/History';
-import { banner } from '../utils/bin';
+import { banner, contact } from '../utils/bin';
+
+
 
 interface IndexPageProps {
   inputRef: React.MutableRefObject<HTMLInputElement>;
@@ -39,12 +41,60 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
     <>
       <Head>
         <title>{config.title}</title>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300;400;700&display=swap" rel="stylesheet" />
       </Head>
 
-      <div className="p-8 overflow-hidden h-full pt-12">
-      <div className="text-center text-2xl font-bold text-light-yellow dark:text-dark-yellow mb-4">
-          {config.title}
+      <div className="p-4 overflow-hidden h-full pt-36">
+
+        <div
+          className="text-center font-bold text-light-yellow dark:text-dark-yellow"
+          style={{
+            color: '#00FF00',
+            fontFamily: 'Roboto Mono, monospace',
+            fontSize: '50px',
+            letterSpacing: '-6px',
+            marginBottom: '32px',
+          }}
+        >
+          jeromevillanueva:$
         </div>
+
+        <div className="text-center mb-5">
+          <button
+            onClick={async () => {
+              const contactResult = await contact([]);
+              setHistory([contactResult].join('\n'));
+              setCommand('');
+              inputRef.current?.focus();
+            }}
+            className="px-3 py-0 rounded text-light-yellow dark:text-dark-yellow"
+            style={{
+              fontFamily: 'Roboto Mono, monospace',
+              fontSize: '20px',
+              letterSpacing: '0px'
+            }}
+          >
+            /Contact
+          </button>
+
+          <button
+            onClick={async () => {
+              const contactResult = await contact([]);
+              setHistory([contactResult].join('\n'));
+              setCommand('');
+              inputRef.current?.focus();
+            }}
+            className="px-3 py-0 rounded text-light-yellow dark:text-dark-yellow"
+            style={{
+              fontFamily: 'Roboto Mono, monospace',
+              fontSize: '20px',
+              letterSpacing: '0px'
+            }}
+          >
+            /Resume
+          </button>
+        </div>
+
         <div ref={containerRef} className="overflow-y-auto h-full">
           <History history={history} />
 
