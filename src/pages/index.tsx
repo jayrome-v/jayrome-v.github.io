@@ -41,7 +41,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
         <title>{config.title}</title>
       </Head>
       
-      <div className="p-4 mt-32 h-[calc(100%-8rem)] w-full border rounded-md border-light-yellow dark:border-dark-yellow">
+      <div className="p-4 mt-48 h-[calc(100%-12rem)] w-full border rounded-md border-light-yellow dark:border-dark-yellow">
 
 
         <div ref={containerRef} className="overflow-y-auto h-full">
