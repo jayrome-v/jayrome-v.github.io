@@ -49,8 +49,8 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
           {config.title}
         </div>
 
-        {/* Terminal Box with flex-grow to take up remaining space, no border */}
-        <div className="flex-1 p-4 w-full overflow-hidden">
+        {/* Terminal Box with flex-grow to take up remaining space */}
+        <div className="flex-1 p-4 w-full overflow-hidden flex flex-col">
           <div ref={containerRef} className="overflow-y-auto h-full">
             <History history={history} />
 
