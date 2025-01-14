@@ -41,7 +41,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
         <title>{config.title}</title>
       </Head>
 
-      <div className="p-8 overflow-hidden h-full">
+      <div className="p-8 overflow-hidden h-full pt-12">
       <div className="text-center text-2xl font-bold text-light-yellow dark:text-dark-yellow mb-4">
           {config.title}
         </div>
