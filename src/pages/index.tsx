@@ -45,29 +45,26 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
       <div className="h-screen flex flex-col">
         
         {/* Header with title */}
-        <div className="text-center text-2xl font-bold text-light-yellow dark:text-dark-yellow pt-8">
+        <div className="text-center text-2xl font-bold text-light-yellow dark:text-dark-yellow pt-8 mb-4">
           {config.title}
         </div>
 
-        {/* Terminal Box with flex-grow to take up remaining space */}
+        {/* Terminal Box with flex-grow to take up remaining space, no border */}
         <div className="flex-1 p-4 w-full overflow-hidden">
-          {/* Box for the terminal with border */}
-          <div className="h-full border rounded-md border-light-yellow dark:border-dark-yellow">
-            <div ref={containerRef} className="overflow-y-auto h-full">
-              <History history={history} />
+          <div ref={containerRef} className="overflow-y-auto h-full">
+            <History history={history} />
 
-              <Input
-                inputRef={inputRef}
-                containerRef={containerRef}
-                command={command}
-                history={history}
-                lastCommandIndex={lastCommandIndex}
-                setCommand={setCommand}
-                setHistory={setHistory}
-                setLastCommandIndex={setLastCommandIndex}
-                clearHistory={clearHistory}
-              />
-            </div>
+            <Input
+              inputRef={inputRef}
+              containerRef={containerRef}
+              command={command}
+              history={history}
+              lastCommandIndex={lastCommandIndex}
+              setCommand={setCommand}
+              setHistory={setHistory}
+              setLastCommandIndex={setLastCommandIndex}
+              clearHistory={clearHistory}
+            />
           </div>
         </div>
       </div>
