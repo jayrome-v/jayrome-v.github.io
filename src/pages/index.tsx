@@ -42,7 +42,7 @@ const IndexPage: React.FC<IndexPageProps> = ({ inputRef }) => {
       </Head>
 
       {/* Outer container with full height and flex layout */}
-      <div className="h-screen flex flex-col">
+      <div className="h-screen flex flex-col overflow-hidden">
         
         {/* Header with title */}
         <div className="text-center text-2xl font-bold text-light-yellow dark:text-dark-yellow pt-8 mb-4">
